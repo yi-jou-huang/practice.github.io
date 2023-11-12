@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>HTML DOM 網頁畫面操作練習 </title>
+        <link rel="stylesheet" type="text/css" href="trytoHTML_DOM.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito">
+
+    <body>
+        <h1>第一頁</h1>
+        <h2>第二頁</h2>
+        <h3>第三頁</h3>
+        <div class="text_type">asdfhkdl</div>
+        <div class="font_color">each stage 有每個階段適合的知識—— <br>學習不要從基礎開始，直接從「最有用」的部分開始，</div>
+        <div class="block_title text">
+            <!--
+            <div onmouseover="changeTOabout()" class="a" >關於我</div>
+            <div class="a">2</div>-->
+            <span class="text_type" onmouseover="changeTOabout()">關於我</span> 
+            <span class="text_type" onmouseover="changeTOexpme()">學經歷</span>  <!--如果點學經歷 關於我跟自學工具就要隱藏 //onclick-->
+            <span class="font_color" onmouseover="changeTOtool()">自學工具</span>
+        </div>
+        <hr/>
+        <div id="about">大家好~ 我是彭彭</div>
+        <div id="expme" style= "display:none">我是心理系畢業，後來當軟體工程師</div>
+        <div onclick="goYOUTUBE(this)" 
+             id="tool" 
+             style="display:none"
+             >youtube</div>
+        <script>
+            function changeTOabout(){      // 點了 關於我 之後 做以下操作 把 學經歷 自學工具 藏起來
+                let aboutDiv=document.querySelector("#about");
+                let expmeDiv=document.querySelector("#expme");
+                let toolDiv=document.querySelector("#tool");
+                aboutDiv.style.display="block";
+                expmeDiv.style.display="none";
+                toolDiv.style.display="none";
+            }
+            function changeTOexpme(){     // 點了 學經歷 之後 做以下操作 把 關於我 自學工具  藏起來
+                // 取得物件標籤 
+                let aboutDiv=document.querySelector("#about");
+                let expmeDiv=document.querySelector("#expme");
+                let toolDiv=document.querySelector("#tool");
+                // 再操作物件標籤
+                aboutDiv.style.display="none";
+                expmeDiv.style.display="block";
+                toolDiv.style.display="none";
+            }
+            function changeTOtool(){     // 點了 自學工具 之後 做以下操作 把 關於我 學經歷  藏起來
+                // 取得物件標籤 
+                let aboutDiv=document.querySelector("#about");
+                let expmeDiv=document.querySelector("#expme");
+                let toolDiv=document.querySelector("#tool");
+                // 再操作物件標籤
+                aboutDiv.style.display="none";
+                expmeDiv.style.display="none";
+                toolDiv.style.display="block";
+            };
+            function goYOUTUBE(elem){
+                //elem.style.color=gray;
+                window.location.href="https://www.youtube.com/";};
+            
+        </script>
+    </body>
+</html>

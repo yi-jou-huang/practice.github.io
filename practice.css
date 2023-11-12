@@ -1,0 +1,20 @@
+﻿
+.block_title{
+    background-color:white;
+}
+.text_type{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.font_color{
+    color:coral;
+    font-family:"Nunito";
+}
+.a{
+    background-color:orange;
+    width:80px;
+    height:80px;
+    margin:10px;
+}
+.test{
+    display:flexbox;
+}
